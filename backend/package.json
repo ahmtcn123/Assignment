@@ -34,6 +34,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "@fastify/cors": "^8.3.0",
     "@fastify/env": "^4.2.0",
     "@fastify/formbody": "^7.4.0",
     "@fastify/multipart": "^7.7.3",

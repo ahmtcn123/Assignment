@@ -134,7 +134,12 @@ export default async function category(fastify: FastifyInstance, opts) {
             where: {
                 parent: {
                     is: null
-                }
+                },
+                ...(
+                    req.query.category_id && !isNaN(Number(req.query.category_id)) && {
+                        id: Number(req.query.category_id)
+                    }
+                )
             },
             include: {
                 parent: true,
