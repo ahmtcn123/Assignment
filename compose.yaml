@@ -1,0 +1,20 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"  # Map your app's port to the host machine
+    depends_on:
+      - mysql
+    environment:
+      - MYSQL_HOST=mysql  # Set MySQL host to the service name 'mysql'
+
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: assignment
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test

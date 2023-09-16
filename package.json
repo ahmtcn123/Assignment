@@ -1,0 +1,49 @@
+{
+  "name": "assignment1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node build/index.js | pino-pretty --colorize",
+    "dev": "ts-node-dev ./src/index.ts | pino-pretty --colorize",
+    "db:studio": "prisma studio",
+    "db:migrate": "prisma migrate dev",
+    "db:push": "prisma db push",
+    "db:seed": "node src/scripts/seed.js"
+  },
+  "prisma": {
+    "schema": "src/prisma/schema.prisma"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmtcn123/Assignment1.git"
+  },
+  "author": "Ahmetcan Aksu <ahmetcanco@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahmtcn123/Assignment1/issues"
+  },
+  "homepage": "https://github.com/ahmtcn123/Assignment1#readme",
+  "devDependencies": {
+    "@types/node": "^20.6.0",
+    "nodemon": "^3.0.1",
+    "pino-pretty": "^10.2.0",
+    "prisma": "^5.2.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@fastify/env": "^4.2.0",
+    "@fastify/formbody": "^7.4.0",
+    "@fastify/multipart": "^7.7.3",
+    "@fastify/static": "^6.11.1",
+    "@prisma/client": "^5.2.0",
+    "desm": "^1.3.0",
+    "fastify": "^4.23.0",
+    "fluent-json-schema": "^4.2.0-beta.0",
+    "form-auto-content": "^3.2.0",
+    "sharp": "^0.32.5",
+    "tap": "^16.3.8"
+  }
+}
