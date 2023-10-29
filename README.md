@@ -1,7 +1,5 @@
 # Assignment
 
-If you notice something is wrong its because Im part working in realtime job and completing this assignment in my freetime.
-
 ## Contents Of The Doc
 
 - ### [Backend Docs](#backend)
